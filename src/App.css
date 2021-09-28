@@ -1,3 +1,36 @@
-.App {
+:root {
+  --phanton-grey: #67899c;
+  --phanton-blue: #62b5e5;
+  --phanton-green: #addc91;
+}
+
+@font-face {
+  font-family: "HalveticaNueLight";
+  src: local("HalveticaNueLight"), url("./font/HelveticaNeue-Light.otf")
+  format("truetype");
+}
+
+@font-face {
+  font-family: "HalveticaNueBold";
+  src: local("HalveticaNueBold"), url("./font/Helvetica-Neue-Bold_22498.ttf")
+  format("truetype");
+  font-weight: bold;
+}
+
+.nav-bar {
+  font-family: "HalveticaNueBold";
+  background-color: var(--phanton-grey);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 10px 0;
+}
+
+.more, .trend {
   text-align: center;
+}
+
+.more-icon, .trend-icon {
+  font-size: 30px;
 }

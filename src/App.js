@@ -1,9 +1,10 @@
+import Nav from './components/views/Nav'
 import './App.css';
 
 const App = () => {
   return (
     <div className="App">
-     App
+      <Nav />
     </div>
   );
 }
