@@ -24,13 +24,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 10px 0;
+  padding: 10px 5px 10px 5px;
 }
 
-.more, .trend {
+.more, .trend, .progress, .add {
   text-align: center;
 }
 
-.more-icon, .trend-icon {
+.more-icon, .trend-icon, .progress-icon, .add-icon {
   font-size: 30px;
+  color: #fff;
 }
