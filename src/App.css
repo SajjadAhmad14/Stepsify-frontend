@@ -2,6 +2,7 @@
   --phanton-grey: #67899c;
   --phanton-blue: #62b5e5;
   --phanton-green: #addc91;
+  --white: #fff;
 }
 
 @font-face {
@@ -20,18 +21,97 @@
 .nav-bar {
   font-family: "HalveticaNueBold";
   background-color: var(--phanton-grey);
-  color: #fff;
+  color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5px 10px 5px;
+  padding: 10px;
 }
 
-.more, .trend, .progress, .add {
+.text-center {
   text-align: center;
 }
 
 .more-icon, .trend-icon, .progress-icon, .add-icon {
   font-size: 30px;
-  color: #fff;
+  color: var(--white);
+}
+
+.add-steps-heading {
+  background-color: var(--phanton-blue);
+  padding: 5px 0 5px 0;
+  width: 100%;
+}
+
+.add-steps-heading h1 {
+  color: var(--white);
+}
+
+.steps-page h3 {
+  font-family: "HalveticaNueBold";
+  color: var(--phanton-grey);
+}
+
+.steps-input {
+  background-color: var(--phanton-grey);
+  color: var(--phanton-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps-input {
+  background-color: #d3d3d3;
+  height: 100vh;
+}
+
+.steps-input form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  color: #000;
+  margin: 0;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  margin-top: -60px;
+}
+
+.steps-input form input {
+  outline: none;
+  border: none;
+  text-align: center;
+  font-size: 80px;
+  width: 50%;
+  padding: 30px;
+}
+
+.submit-btn, .reset-btn {
+  position: absolute;
+  bottom: -110px;
+}
+
+.submit-btn {
+  padding: 20px 30px 20px 30px;
+  background-color: var(--phanton-green);
+  margin-left: 120px;
+  outline: none;
+  border: none;
+  color: var(--white);
+  font-family: "HalveticaNueBold";
+  font-size: 20px;
+  width: 150px;
+}
+
+.reset-btn {
+  outline: none;
+  border: none;
+  margin-right: 120px;
+  padding: 20px 30px 20px 30px;
+  background-color: var(--white);
+  color: var(--phanton-grey);
+  font-family: "HalveticaNueBold";
+  font-size: 20px;
+  width: 150px;
 }
