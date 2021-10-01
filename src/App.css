@@ -25,11 +25,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px 0 20px 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.nav-bar a:hover {
+  background-color: var(--phanton-blue);
+}
+
+.nav-bar a:active {
+  background-color: var(--phanton-blue);
 }
 
 .text-center {
   text-align: center;
+  padding: 10px 20px 10px 20px;
 }
 
 .more-icon, .trend-icon, .progress-icon, .add-icon {
@@ -89,7 +108,7 @@
 
 .submit-btn, .reset-btn {
   position: absolute;
-  bottom: -110px;
+  bottom: -90px;
 }
 
 .submit-btn {
