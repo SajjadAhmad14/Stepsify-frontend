@@ -1,4 +1,4 @@
-import { FaEllipsisH, FaPlus } from "react-icons/fa";
+import { FaEllipsisH, FaPlus, FaUserCircle } from "react-icons/fa";
 import { BiTrendingUp } from "react-icons/bi";
 import { AiTwotonePieChart } from "react-icons/ai";
 import App from '../App';
@@ -13,10 +13,23 @@ import StepsPage from './views/StepsPage';
 import StepsifyPage from './views/StepsifyPage';
 import MorePage from './views/MorePage';
 import ProgressPage from './views/ProgressPage'
+import SignUp from './views/SignUp';
+import Login from './views/LogIn';
 
 const Routes = () => (
   <Router>
     <div className='nav-bar'>
+      <Link to="/login">
+        <div className='text-center'>
+          <FaUserCircle className='user-icon' />
+          <div>Login</div>
+        </div>
+      </Link>
+      {/* <Link to="/signup">
+        <div className='text-center'>
+          Sign Up
+        </div>
+      </Link> */}
       <Link to="/">
         <div className='text-center'>
           <FaPlus className='add-icon' />
@@ -32,7 +45,7 @@ const Routes = () => (
       <Link to="/progresspage">
         <div className='text-center'>
           <AiTwotonePieChart className='progress-icon' />
-          <div>Your Progress</div>
+          <div>Progress</div>
         </div>
       </Link>
       <Link to="/morepage">
@@ -44,6 +57,8 @@ const Routes = () => (
     </div>
     <Switch>
       <Route exact path="/" component={App} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/signup" component={SignUp} />
       <Route exact path="/addtarget" component={StepsPage} />
       <Route exact path="/addsteps" component={StepsifyPage} />
       <Route exact path="/progresspage" component={ProgressPage} />

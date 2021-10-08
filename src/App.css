@@ -25,7 +25,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0 20px 0;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -48,10 +47,10 @@
 
 .text-center {
   text-align: center;
-  padding: 10px 20px 10px 20px;
+  padding: 10px;
 }
 
-.more-icon, .trend-icon, .progress-icon, .add-icon {
+.more-icon, .trend-icon, .progress-icon, .add-icon, .user-icon {
   font-size: 30px;
   color: var(--white);
 }
@@ -90,11 +89,10 @@
   justify-content: center;
   background-color: var(--white);
   color: #000;
-  margin: 0;
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  margin-top: -60px;
+  margin-top: -130px;
 }
 
 .steps-input form input {
@@ -108,7 +106,7 @@
 
 .submit-btn, .reset-btn {
   position: absolute;
-  bottom: -90px;
+  bottom: -70px;
 }
 
 .submit-btn {
@@ -133,4 +131,49 @@
   font-family: "HalveticaNueBold";
   font-size: 20px;
   width: 150px;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--phanton-grey)
+}
+
+#name, #password {
+  padding: 10px;
+  width: 250px;
+  background-color: transparent;
+  border: 2px solid var(--phanton-green);
+  outline: none;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+::placeholder {
+  color: var(--white);
+}
+
+#submit-btn {
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: var(--phanton-green);
+  padding: 5px;
+  border: 2px solid var(--phanton-green);
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#submit-btn:hover {
+  background-color: transparent;
+  color: var(--white)
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-self: center;
 }
