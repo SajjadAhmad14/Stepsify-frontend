@@ -22,14 +22,9 @@ const Routes = () => (
       <Link to="/login">
         <div className='text-center'>
           <FaUserCircle className='user-icon' />
-          <div>Login</div>
+          <div>Log in</div>
         </div>
       </Link>
-      {/* <Link to="/signup">
-        <div className='text-center'>
-          Sign Up
-        </div>
-      </Link> */}
       <Link to="/">
         <div className='text-center'>
           <FaPlus className='add-icon' />

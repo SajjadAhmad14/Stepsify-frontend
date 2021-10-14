@@ -168,7 +168,7 @@
   border-radius: 10px;
 }
 
-#submit-btn:hover {
+#submit-btn:hover, .signup-btn a:hover {
   background-color: transparent;
   color: var(--white)
 }
@@ -176,4 +176,20 @@
 .btn-wrapper {
   display: flex;
   justify-self: center;
+}
+
+.signup-route {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.signup-route div {
+  margin: 10px 0 10px 0;
+  font-size: 30px;
+}
+
+.signup-btn a{
+  text-decoration: none;
+  color: var(--phanton-green);
 }
