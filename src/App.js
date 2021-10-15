@@ -1,4 +1,4 @@
-import StepsPage from './components//views/StepsPage'
+import StepsPage from './components/views/StepsPage'
 import StepsifyPage from './components/views/StepsifyPage'
 import './App.css';
 

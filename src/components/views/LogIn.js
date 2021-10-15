@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import allActions from '../store/actions/index'
 import {
   Link,
 } from 'react-router-dom';
 const axios = require('axios');
 const Login = () => {
+  const dispatch = useDispatch()
   const notify = (error) => {
     toast.error(`${error}`, {
       position: toast.POSITION.TOP_CENTER
@@ -28,6 +31,7 @@ const Login = () => {
       password: password
     })
       .then((data) => {
+        dispatch(allActions.login(data.data.user))
         localStorage.setItem('token', JSON.stringify({
           token: data.data.token
         }));
