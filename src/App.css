@@ -154,7 +154,7 @@
 }
 
 ::placeholder {
-  color: var(--white);
+  color: var(--phanton-grey);
 }
 
 #submit-btn {
