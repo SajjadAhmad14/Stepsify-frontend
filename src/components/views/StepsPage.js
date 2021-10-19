@@ -1,8 +1,12 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import addActivity from '../store/actions/activity'
 
 const StepsPage = () => {
   const [target, setTarget] = useState(0.0)
+  const dispatch = useDispatch()
+  const data = useSelector(state => state.activityReducer)
   const handleChange = (e) => {
     const target = parseFloat(e.target.value).toFixed(1)
     setTarget(target)
@@ -15,7 +19,7 @@ const StepsPage = () => {
       target: target
     })
     .then((data) => {
-      console.log(data.data.target)
+      dispatch(addActivity(data.data.target))
     })
     .catch(error => {
       if(error.response) {
