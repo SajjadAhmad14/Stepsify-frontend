@@ -93,6 +93,7 @@
   height: 320px;
   border-radius: 50%;
   margin-top: -130px;
+  border: 5px solid var(--phanton-blue)
 }
 
 .steps-input form input {

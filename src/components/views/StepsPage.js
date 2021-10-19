@@ -12,6 +12,10 @@ const StepsPage = () => {
     setTarget(target)
   }
 
+  const handleReset = () => {
+    document.getElementById('target-form').reset()
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(target);
@@ -34,9 +38,9 @@ const StepsPage = () => {
       </div>
       <h3>Add your running target in kilo meters</h3>
       <div className='steps-input'>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="steps" placeholder="0.0" onChange={handleChange} />
-          <button type="reset" value="Reset" className="reset-btn">Reset</button>
+        <form onSubmit={handleSubmit} id = "target-form">
+          <input type="text" name="steps" placeholder="0.0" onChange={handleChange} required />
+          <button type="reset" value="Reset" className="reset-btn" onClick={handleReset}>Reset</button>
           <button type="submit" className="submit-btn">Add</button>
         </form>
       </div>
