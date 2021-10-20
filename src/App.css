@@ -65,6 +65,12 @@
   color: var(--white);
 }
 
+.stepsify-page {
+  background-color: var(--phanton-blue);
+  display: flex;
+  align-items: center
+}
+
 .steps-page h3 {
   font-family: "HalveticaNueBold";
   color: var(--phanton-grey);
@@ -103,6 +109,21 @@
   font-size: 80px;
   width: 50%;
   padding: 30px;
+}
+
+.steps-form {
+  position: absolute;
+  top: 200px;
+  right: 80px;
+}
+
+.steps-form input {
+  padding: 10px;
+  outline: none;
+  border: 2px solid var(--phanton-blue);
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .submit-btn, .reset-btn {
