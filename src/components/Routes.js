@@ -20,6 +20,7 @@ const Routes = () => (
   <Router>
     <div className='nav-bar'>
       <Link to="/login">
+    
         <div className='text-center'>
           <FaUserCircle className='user-icon' />
           <div>Log in</div>
@@ -31,7 +32,7 @@ const Routes = () => (
           <div>Add Steps</div>
         </div>
       </Link>
-      <Link to="/addtarget">
+      <Link to="/addsteps">
         <div className='text-center'>
           <BiTrendingUp className='trend-icon' />
           <div>Stepsify</div>

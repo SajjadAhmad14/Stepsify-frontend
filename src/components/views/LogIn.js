@@ -32,9 +32,9 @@ const Login = () => {
     })
       .then((data) => {
         dispatch(allActions.login(data.data.user))
-        localStorage.setItem('token', JSON.stringify({
-          token: data.data.token
-        }));
+        localStorage.setItem('token', JSON.stringify(
+          data.data.token
+        ));
         history.push('/')
       })
       .catch(error => {
