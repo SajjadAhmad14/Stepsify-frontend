@@ -126,6 +126,11 @@
   text-align: center;
 }
 
+.cancel-step, .submit-step {
+  padding: 8px;
+  margin-top: 5px;
+}
+
 .submit-btn, .reset-btn {
   position: absolute;
   bottom: -70px;
