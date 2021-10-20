@@ -36,6 +36,7 @@ const Login = () => {
           data.data.token
         ));
         history.push('/')
+        window.location.reload()
       })
       .catch(error => {
         if (error.response) {
