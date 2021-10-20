@@ -15,17 +15,26 @@ import MorePage from './views/MorePage';
 import ProgressPage from './views/ProgressPage'
 import SignUp from './views/SignUp';
 import Login from './views/LogIn';
+import SignOut from './views/SignOut'
 
 const Routes = () => (
   <Router>
     <div className='nav-bar'>
-      <Link to="/login">
-    
-        <div className='text-center'>
-          <FaUserCircle className='user-icon' />
-          <div>Log in</div>
-        </div>
-      </Link>
+      {window.localStorage.getItem('token') ?
+        <Link to='/signout'>
+          <div className='text-center'>
+            <FaUserCircle className='user-icon' />
+            <div>Log Out</div>
+          </div>
+        </Link>
+        :
+        <Link to="/login">
+          <div className='text-center'>
+            <FaUserCircle className='user-icon' />
+            <div>Log in</div>
+          </div>
+        </Link>
+      }
       <Link to="/">
         <div className='text-center'>
           <FaPlus className='add-icon' />
@@ -59,6 +68,7 @@ const Routes = () => (
       <Route exact path="/addsteps" component={StepsifyPage} />
       <Route exact path="/progresspage" component={ProgressPage} />
       <Route exact path="/morepage" component={MorePage} />
+      <Route exact path="/signout" component={SignOut} />
     </Switch>
   </Router>
 );
