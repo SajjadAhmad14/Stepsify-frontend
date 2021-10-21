@@ -6,7 +6,6 @@ import addActivity from '../store/actions/activity'
 const StepsPage = () => {
   const [target, setTarget] = useState(0.0)
   const dispatch = useDispatch()
-  const data = useSelector(state => state.activityReducer.activity)
   const handleChange = (e) => {
     const target = parseFloat(e.target.value).toFixed(1)
     setTarget(target)
@@ -18,7 +17,6 @@ const StepsPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(target);
     axios.post('http://localhost:3000/api/v1/activities', {
       target: target
     })
@@ -27,7 +25,7 @@ const StepsPage = () => {
     })
     .catch(error => {
       if(error.response) {
-        console.log(error.response)
+        return error.response
       }
     })
   }

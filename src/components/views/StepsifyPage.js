@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Redirect } from "react-router";
 import { AiOutlinePlus } from "react-icons/ai";
 import axios from "axios";
 
 const StepsifyPage = () => {
-  const id = useSelector(state => state.activityReducer.activity.id)
+  const data = useSelector(state => state.loginReducer)
+  console.log(data);
   const isLoggedIn = !!localStorage.getItem('token')
   const [open, setIsOpen] = useState(false)
   const [steps, setSteps] = useState('')
@@ -15,16 +16,14 @@ const StepsifyPage = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(id);
-    if(id) {
-      axios.post(`http://localhost:3000/api/v1/activities/${id}/activity_stats`, {
-        steps: steps,
-        activity_id: id
-      })
-      .then((data) => {
-        console.log(data)
-      })
-    }
+    // if(id) {
+    //   axios.post(`http://localhost:3000/api/v1/activities/${id}/activity_stats`, {
+    //     steps: steps,
+    //   })
+    //   .then((data) => {
+    //     console.log(data)
+    //   })
+    // }
   }
 
   const handleReset = () => {

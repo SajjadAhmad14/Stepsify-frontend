@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react' 
 import { useDispatch } from 'react-redux'
-import CheckLogin from './components/store/actions/persistLogin'
+import CheckLogin from './components/views/persistLogin'
 import StepsPage from './components/views/StepsPage'
-import StepsifyPage from './components/views/StepsifyPage'
-import MorePage from './components/views/MorePage'
-import ProgressPage from './components/views/ProgressPage'
 import './App.css';
 
 const App = () => {
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(CheckLogin)
-  })
+  // useEffect(() => {
+  //   return (
+  //     <CheckLogin />
+  //   )
+  // })
   return (
     <div className="App">
       <StepsPage />
+      {/* <CheckLogin /> */}
     </div>
   );
 }
