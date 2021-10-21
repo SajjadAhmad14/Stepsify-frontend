@@ -6,7 +6,7 @@ import addActivity from '../store/actions/activity'
 const StepsPage = () => {
   const [target, setTarget] = useState(0.0)
   const dispatch = useDispatch()
-  const data = useSelector(state => state.activityReducer)
+  const data = useSelector(state => state.activityReducer.activity)
   const handleChange = (e) => {
     const target = parseFloat(e.target.value).toFixed(1)
     setTarget(target)
@@ -23,7 +23,7 @@ const StepsPage = () => {
       target: target
     })
     .then((data) => {
-      dispatch(addActivity(data.data.target))
+      dispatch(addActivity(data.data))
     })
     .catch(error => {
       if(error.response) {
