@@ -126,9 +126,23 @@
   text-align: center;
 }
 
+.cancel-step {
+  margin-right: 5px;
+}
+
 .cancel-step, .submit-step {
   padding: 8px;
   margin-top: 5px;
+  background-color: var(--phanton-green);
+  border: 2px solid var(--phanton-green);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.cancel-step:hover, .submit-step:hover {
+  background-color: transparent;
+  color: var(--phanton-grey);
 }
 
 .submit-btn, .reset-btn {
