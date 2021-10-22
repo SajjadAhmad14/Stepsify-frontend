@@ -5,8 +5,8 @@ import { AiOutlinePlus } from "react-icons/ai";
 import axios from "axios";
 
 const StepsifyPage = () => {
-  const data = useSelector(state => state.loginReducer)
-  console.log(data);
+  // const data = useSelector(state => state.loginReducer)
+  // console.log(data);
   const isLoggedIn = !!localStorage.getItem('token')
   const [open, setIsOpen] = useState(false)
   const [steps, setSteps] = useState('')
@@ -16,6 +16,22 @@ const StepsifyPage = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
+    const token = JSON.parse(localStorage.getItem("token"));
+  axios
+    .get("http://localhost:3000/auto_login", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    })
+    .then((data) => {
+      console.log(data)
+    })
+    .catch((error) => {
+      if (error.response) {
+        localStorage.removeItem("token");
+      }
+    });
     // if(id) {
     //   axios.post(`http://localhost:3000/api/v1/activities/${id}/activity_stats`, {
     //     steps: steps,
