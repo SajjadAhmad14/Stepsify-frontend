@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { useSelector } from 'react-redux'
 import { Redirect } from "react-router";
 import { AiOutlinePlus } from "react-icons/ai";
+import isLoggedIn from './isLoggedIn'
 import axios from "axios";
 
-const StepsifyPage = () => {
-  // const data = useSelector(state => state.loginReducer)
-  // console.log(data);
-  const isLoggedIn = !!localStorage.getItem('token')
+const StepsifyPage = () => {  
   const [open, setIsOpen] = useState(false)
   const [steps, setSteps] = useState('')
   const handleChange = (e) => {
@@ -49,7 +47,7 @@ const StepsifyPage = () => {
   const stepsForm = () => {
     setIsOpen(true);
   };
-  if(!isLoggedIn) {
+  if(!isLoggedIn()) {
     return <Redirect to='/login'/>
   }
   return (

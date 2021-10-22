@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router'
+import { Redirect, useHistory } from 'react-router'
 import addActivity from '../store/actions/activity'
+import isLoggedIn from './isLoggedIn'
 
 const StepsPage = () => {
   const history = useHistory()
@@ -31,6 +32,9 @@ const StepsPage = () => {
         return error.response
       }
     })
+  }
+  if(!isLoggedIn()) {
+    return <Redirect to='/login'/>
   }
   return (
     <div className='text-center steps-page'>
