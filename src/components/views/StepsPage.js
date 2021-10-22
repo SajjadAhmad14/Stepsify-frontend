@@ -1,9 +1,11 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router'
 import addActivity from '../store/actions/activity'
 
 const StepsPage = () => {
+  const history = useHistory()
   const [target, setTarget] = useState(0.0)
   const dispatch = useDispatch()
   const handleChange = (e) => {
@@ -22,6 +24,7 @@ const StepsPage = () => {
     })
     .then((data) => {
       dispatch(addActivity(data.data))
+      history.push('/addsteps')
     })
     .catch(error => {
       if(error.response) {
