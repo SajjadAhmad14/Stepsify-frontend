@@ -8,12 +8,8 @@ import axios from "axios";
 
 const StepsifyPage = () => {
   const [open, setIsOpen] = useState(false);
-  const [show, setShow] = useState(false)
   const [steps, setSteps] = useState("");
-  const [calories, setCalories] = useState({
-    steps: 0,
-    calories: 0,
-  });
+  const [calories, setCalories] = useState([]);
   const handleChange = (e) => {
     e.preventDefault();
     setSteps(e.target.value);
@@ -39,10 +35,12 @@ const StepsifyPage = () => {
             }
           )
           .then((data) => {
-            setCalories({
+            let newArr = [...calories]
+            newArr.push({
               steps: data.data.steps.steps,
               calories: data.data.calories,
-            });
+            })
+            setCalories(newArr);
           });
       })
       .catch((error) => {
@@ -50,7 +48,6 @@ const StepsifyPage = () => {
           localStorage.removeItem("token");
         }
       });
-      setShow(true)
   };
 
   const handleReset = () => {
@@ -63,8 +60,6 @@ const StepsifyPage = () => {
   if (!isLoggedIn()) {
     return <Redirect to="/login" />;
   }
-  // console.log(steps)
-  // console.log(calories.calories)
   return (
     <div className="stepsify-page">
       <div className="stepsify-nav">
@@ -87,18 +82,22 @@ const StepsifyPage = () => {
           />
           <br />
           <div className="text-center">
-          <button type="reset" className="cancel-step" onClick={handleReset}>
-            Cancel
-          </button>
-          <button type="submit" className="submit-step">
-            Submit
-          </button>
+            <button type="reset" className="cancel-step" onClick={handleReset}>
+              Cancel
+            </button>
+            <button type="submit" className="submit-step">
+              Submit
+            </button>
           </div>
         </form>
       )}
-      {show && (
-        <CaloriesCard steps={steps} calories={calories.calories}/> 
-      )}
+      {calories.map((item) => {
+        // 
+        <div>
+          this is
+        </div>
+      })
+      }
     </div>
   );
 };

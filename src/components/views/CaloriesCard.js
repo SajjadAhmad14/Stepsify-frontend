@@ -1,6 +1,5 @@
-const CaloriesCard = (props) => {
-  const data = props.steps;
-  console.log(data)
+const CaloriesCard = (item) => {
+  console.log(item)
   return(
     <div>
       This is card
