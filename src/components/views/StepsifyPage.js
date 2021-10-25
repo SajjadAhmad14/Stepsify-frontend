@@ -3,12 +3,17 @@ import { useSelector } from "react-redux";
 import { Redirect } from "react-router";
 import { AiOutlinePlus } from "react-icons/ai";
 import isLoggedIn from "./isLoggedIn";
+import CaloriesCard from "./CaloriesCard";
 import axios from "axios";
 
 const StepsifyPage = () => {
   const [open, setIsOpen] = useState(false);
+  const [show, setShow] = useState(false)
   const [steps, setSteps] = useState("");
-  // const [id, setId] = useState(0)
+  const [calories, setCalories] = useState({
+    steps: 0,
+    calories: 0,
+  });
   const handleChange = (e) => {
     e.preventDefault();
     setSteps(e.target.value);
@@ -34,7 +39,10 @@ const StepsifyPage = () => {
             }
           )
           .then((data) => {
-            console.log(data);
+            setCalories({
+              steps: data.data.steps.steps,
+              calories: data.data.calories,
+            });
           });
       })
       .catch((error) => {
@@ -42,6 +50,7 @@ const StepsifyPage = () => {
           localStorage.removeItem("token");
         }
       });
+      setShow(true)
   };
 
   const handleReset = () => {
@@ -54,13 +63,17 @@ const StepsifyPage = () => {
   if (!isLoggedIn()) {
     return <Redirect to="/login" />;
   }
+  // console.log(steps)
+  // console.log(calories.calories)
   return (
-    <div className="text-center stepsify-page">
-      <div className="add-steps-heading">
-        <h1>Stepsify</h1>
-      </div>
-      <div>
-        <AiOutlinePlus className="add-icon" onClick={stepsForm} />
+    <div className="stepsify-page">
+      <div className="stepsify-nav">
+        <div className="add-steps-heading">
+          <h1>Stepsify</h1>
+        </div>
+        <div>
+          <AiOutlinePlus className="add-icon" onClick={stepsForm} />
+        </div>
       </div>
       {open && (
         <form className="steps-form" onSubmit={handleSubmit}>
@@ -73,13 +86,18 @@ const StepsifyPage = () => {
             onChange={handleChange}
           />
           <br />
+          <div className="text-center">
           <button type="reset" className="cancel-step" onClick={handleReset}>
             Cancel
           </button>
           <button type="submit" className="submit-step">
             Submit
           </button>
+          </div>
         </form>
+      )}
+      {show && (
+        <CaloriesCard steps={steps} calories={calories.calories}/> 
       )}
     </div>
   );
