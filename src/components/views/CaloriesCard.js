@@ -14,7 +14,7 @@ const CaloriesCard = (item) => {
   const month_name = months[month-1]
   return(
     <div className='calories-card'>
-      <div>
+      <div className="date">
         {month_name + date_1 + year}
       </div>
       <div>
