@@ -181,7 +181,10 @@
 }
 
 .calories-card {
-  background-color: var(--white)
+  background-color: var(--white);
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
 } 
 
 .login-form {

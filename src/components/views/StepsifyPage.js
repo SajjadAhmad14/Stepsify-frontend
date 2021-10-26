@@ -37,6 +37,7 @@ const StepsifyPage = () => {
           .then((data) => {
             let newArr = [...calories]
             newArr.push({
+              date: data.data.steps.created_at,
               steps: data.data.steps.steps,
               calories: data.data.calories,
             })
@@ -91,13 +92,10 @@ const StepsifyPage = () => {
           </div>
         </form>
       )}
-      {calories.map((item) => {
-        // 
-        <div>
-          this is
-        </div>
-      })
-      }
+      {calories.map((item) => (
+        <CaloriesCard item={item} />
+      ))
+    }
     </div>
   );
 };
