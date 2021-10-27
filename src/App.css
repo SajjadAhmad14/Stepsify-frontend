@@ -183,10 +183,11 @@
 .calories-card {
   font-family: "HalveticaNueBold";
   background-color: var(--white);
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px;
 } 
 
 .date {

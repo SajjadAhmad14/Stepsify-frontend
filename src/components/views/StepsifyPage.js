@@ -26,6 +26,7 @@ const StepsifyPage = () => {
       })
       .then((data) => {
         const id = data.data.id;
+        console.log(id)
         axios
           .post(
             `http://localhost:3000/api/v1/activities/${id}/activity_stats`,
