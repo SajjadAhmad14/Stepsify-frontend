@@ -181,16 +181,39 @@
 }
 
 .calories-card {
+  font-family: "HalveticaNueBold";
   background-color: var(--white);
   margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 } 
 
 .date {
   color: var(--phanton-grey);
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bolder
+}
+
+.calories {
+  font-family: "HalveticaNueLight";
+  color: #808080;
+  font-size: 20px;
+}
+
+.steps {
+  display:flex;
+  align-items: center;
+  color: var(--phanton-grey);
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.steps span {
+  font-family: "HalveticaNueLight";
+  color: #808080;
+  font-size: 15px;
+  margin-right: 5px;
 }
 
 .login-form {
