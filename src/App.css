@@ -50,7 +50,7 @@
   padding: 10px;
 }
 
-.more-icon, .trend-icon, .progress-icon, .add-icon, .user-icon {
+.more-icon, .trend-icon, .progress-icon, .add-icon, .user-icon, .left-arrow {
   font-size: 30px;
   color: var(--white);
 }
@@ -65,11 +65,51 @@
   color: var(--white);
 }
 
-.stepsify-nav {
+.stepsify-nav, .more-nav {
   background-color: var(--phanton-blue);
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  padding-left: 10px;
+  color: var(--phanton-grey);
+}
+
+.user-avatar {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 20px;
+}
+
+.user-name div {
+  color: var(--phanton-blue);
+  font-size: 10px;
+} 
+
+.flex {
+  display: flex;
+  padding: 10px 0 10px 10px;
+  margin-bottom: 15px;
+}
+
+.user-panel {
+  background-color: lightgray;
+}
+
+.icon, .icon-text {
+  color: var(--phanton-grey);
+}
+
+.icon {
+  margin-right: 10px;
 }
 
 .steps-page h3 {
@@ -225,7 +265,7 @@
   background-color: var(--phanton-grey)
 }
 
-#name, #password {
+#name, #password, #sex {
   padding: 10px;
   width: 250px;
   background-color: transparent;
@@ -235,6 +275,14 @@
   margin-bottom: 10px;
   color: var(--white);
   font-size: 20px;
+}
+
+#sex {
+  width: 270px;
+}
+
+#sex option {
+  color: var(--phanton-grey);
 }
 
 ::placeholder {

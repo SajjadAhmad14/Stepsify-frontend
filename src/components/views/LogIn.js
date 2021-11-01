@@ -17,13 +17,14 @@ const Login = () => {
   };
   const history = useHistory();
   const [name, setName] = useState('');
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('');
   const handleName = (e) => {
     setName(e.target.value)
   }
   const handlePassword = (e) => {
     setPassword(e.target.value)
   }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     axios.post('http://localhost:3000/login', {
@@ -35,6 +36,12 @@ const Login = () => {
         localStorage.setItem('token', JSON.stringify(
           data.data.token
         ));
+        const user = {
+          id: data.data.user.id,
+          sex: data.data.user.sex,
+          name: data.data.user.username
+        }
+        localStorage.setItem('user', JSON.stringify(user));
         history.push('/')
         window.location.reload()
       })

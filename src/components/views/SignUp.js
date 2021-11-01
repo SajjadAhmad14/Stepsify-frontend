@@ -13,19 +13,26 @@ const SignUp = () => {
       position: toast.POSITION.TOP_CENTER
     });
   };
-  const [name, setName] = useState('');
+  const [name, setName] = useState('')
   const [password, setPassword] = useState('')
-  const history = useHistory();
+  const [sex, setSex] = useState('Male')
+  const history = useHistory()
   const handleName = (e) => {
     setName(e.target.value)
   }
   const handlePassword = (e) => {
     setPassword(e.target.value)
   }
+
+  const handleSex = (e) => {
+    setSex(e.target.value)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     axios.post('http://localhost:3000/users', {
       username: name,
+      sex: sex,
       password: password
     })
       .then((data) => {
@@ -41,6 +48,7 @@ const SignUp = () => {
         }
       })
   }
+
 
   return (
     <>
@@ -59,6 +67,10 @@ const SignUp = () => {
         <form onSubmit={handleSubmit}>
           <input type='text' name='name' id='name' placeholder='Username here' required onChange={handleName} /><br />
           <input type='password' name='password' id='password' placeholder='Password here' required onChange={handlePassword} /><br />
+          <select name="sex" id="sex" onClick={handleSex}>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
           <div className='btn-wrapper'>
             <input type='submit' name='submit' id='submit-btn' value='Sign Up' />
           </div>
