@@ -33,7 +33,7 @@ const Login = () => {
     })
       .then((data) => {
         dispatch(allActions.login(data.data.user))
-        localStorage.setItem('token', JSON.stringify(
+        sessionStorage.setItem('token', JSON.stringify(
           data.data.token
         ));
         const user = {
@@ -41,7 +41,7 @@ const Login = () => {
           sex: data.data.user.sex,
           name: data.data.user.username
         }
-        localStorage.setItem('user', JSON.stringify(user));
+        sessionStorage.setItem('user', JSON.stringify(user));
         history.push('/')
         window.location.reload()
       })

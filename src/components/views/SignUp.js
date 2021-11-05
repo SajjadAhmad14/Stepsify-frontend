@@ -37,7 +37,7 @@ const SignUp = () => {
     })
       .then((data) => {
         dispatch(allActions.signUp(data.data.user.username))
-        localStorage.setItem('token', JSON.stringify({
+        sessionStorage.setItem('token', JSON.stringify({
           token: data.data.token
         }));
         history.push('/login');
