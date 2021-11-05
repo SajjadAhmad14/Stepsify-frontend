@@ -55,7 +55,7 @@
   color: var(--white);
 }
 
-.add-steps-heading {
+.add-steps-heading, .progress-heading {
   background-color: var(--phanton-blue);
   padding: 5px 0 5px 0;
   width: 100%;
@@ -65,8 +65,9 @@
   color: var(--white);
 }
 
-.stepsify-nav, .more-nav {
+.stepsify-nav, .more-nav, .progress-nav {
   background-color: var(--phanton-blue);
+  color: var(--white);
   display: flex;
   align-items: center;
   width: 100%;

@@ -9,7 +9,7 @@ import { IoHelpCircleSharp } from "react-icons/io5";
 import { useHistory } from 'react-router';
 
 const MorePage = () => {
-  const user = localStorage.getItem('user');
+  const user = sessionStorage.getItem('user');
   const userInfo = JSON.parse(user)
   const history = useHistory()
   if (!isLoggedIn()) {
