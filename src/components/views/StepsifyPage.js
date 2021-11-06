@@ -1,57 +1,43 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { Redirect } from "react-router";
+import { Redirect, useHistory } from "react-router";
 import { AiOutlinePlus } from "react-icons/ai";
 import isLoggedIn from "./isLoggedIn";
 import CaloriesCard from "./CaloriesCard";
 import axios from "axios";
 
 const StepsifyPage = () => {
+  const history = useHistory()
   const [open, setIsOpen] = useState(false);
   const [steps, setSteps] = useState("");
   const [calories, setCalories] = useState([]);
+  if (!isLoggedIn()) {
+    return <Redirect to="/login" />;
+  }
+  const user = sessionStorage.getItem("user")
+  const userInfo = JSON.parse(user)
+  const id = userInfo.id
+  axios.get(`http://localhost:3000/api/v1/${id}/user_stats`, {
+    user_id: id
+  })
+  .then(data=> {
+    console.log(data)
+  })
   const handleChange = (e) => {
     e.preventDefault();
     setSteps(e.target.value);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const token = JSON.parse(localStorage.getItem("token"));
     axios
-      .get("http://localhost:3000/auto_login", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      })
-      .then((data) => {
-        const id = data.data.id;
-        console.log(id)
-        axios
-          .post(
-            `http://localhost:3000/api/v1/activities/${id}/activity_stats`,
-            {
-              steps: steps,
-              user_id: id,
-            }
-          )
-          .then((data) => {
-            let newArr = [...calories]
-            newArr.push({
-              date: data.data.steps.created_at,
-              steps: data.data.steps.steps,
-              calories: data.data.calories,
-            })
-            setCalories(newArr);
-          });
-      })
-      .catch((error) => {
-        if (error.response) {
-          localStorage.removeItem("token");
+      .post(
+        `http://localhost:3000/api/v1/activity_stats`,
+        {
+          steps: steps,
+          user_id: id,
         }
-      });
+      )
+      // history.push('/progresspage')
   };
-
   const handleReset = () => {
     setIsOpen(false);
   };
@@ -59,12 +45,19 @@ const StepsifyPage = () => {
   const stepsForm = () => {
     setIsOpen(true);
   };
-  if (!isLoggedIn()) {
-    return <Redirect to="/login" />;
-  }
+
+  // const handleClick = () => {
+  //   axios.get(`http://localhost:3000/api/v1/user_stats`, {
+  //     user_id: userInfo.id
+  //   })
+  //     .then(data => {
+  //       console.log(data)
+  //     })
+  // }
+  
   return (
     <div className="stepsify-page">
-      <div className="stepsify-nav">
+      <div className="stepsify-nav text-center">
         <div className="add-steps-heading">
           <h1>Stepsify</h1>
         </div>
@@ -93,10 +86,7 @@ const StepsifyPage = () => {
           </div>
         </form>
       )}
-      {calories.map((item) => (
-        <CaloriesCard item={item} />
-      ))
-    }
+      {/* <CaloriesCard /> */}
     </div>
   );
 };

@@ -20,7 +20,7 @@ import SignOut from './views/SignOut'
 const Routes = () => (
   <Router>
     <div className='nav-bar'>
-      {window.localStorage.getItem('token') ?
+      {window.sessionStorage.getItem('token') ?
         <Link to='/signout'>
           <div className='text-center'>
             <FaUserCircle className='user-icon' />
