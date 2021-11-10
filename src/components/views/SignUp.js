@@ -33,7 +33,8 @@ const SignUp = () => {
     axios.post('https://stepsify.herokuapp.com/users', {
       username: name,
       sex: sex,
-      password: password
+      password: password,
+      headers: {"Access-Control-Allow-Origin": "*"}
     })
       .then((data) => {
         dispatch(allActions.signUp(data.data.user.username))
