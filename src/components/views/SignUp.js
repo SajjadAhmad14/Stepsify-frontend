@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import allActions from '../store/actions/index'
 const axios = require('axios');
 

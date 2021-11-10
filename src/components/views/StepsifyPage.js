@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { Redirect, useHistory } from "react-router";
 import { AiOutlinePlus } from "react-icons/ai";
 import isLoggedIn from "./isLoggedIn";
-import CaloriesCard from "./CaloriesCard";
 import axios from "axios";
 
 const StepsifyPage = () => {
   const history = useHistory()
   const [open, setIsOpen] = useState(false);
   const [steps, setSteps] = useState("");
-  const [calories, setCalories] = useState([]);
   if (!isLoggedIn()) {
     return <Redirect to="/login" />;
   }
