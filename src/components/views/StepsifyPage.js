@@ -16,7 +16,7 @@ const StepsifyPage = () => {
   const user = sessionStorage.getItem("user")
   const userInfo = JSON.parse(user)
   const id = userInfo.id
-  axios.get(`http://localhost:3000/api/v1/${id}/user_stats`, {
+  axios.get(`http://localhost:3000/${id}/user_stats`, {
     user_id: id
   })
   .then(data=> {
@@ -30,13 +30,13 @@ const StepsifyPage = () => {
     e.preventDefault();
     axios
       .post(
-        `http://localhost:3000/api/v1/activity_stats`,
+        `https://stepsify.herokuapp.com/${id}/activity_stats`,
         {
           steps: steps,
           user_id: id,
         }
       )
-      // history.push('/progresspage')
+      history.push('/progresspage')
   };
   const handleReset = () => {
     setIsOpen(false);

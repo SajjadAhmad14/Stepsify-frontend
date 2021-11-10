@@ -27,7 +27,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3000/login', {
+    axios.post('https://stepsify.herokuapp.com/login', {
       username: name,
       password: password
     })

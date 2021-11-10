@@ -30,7 +30,7 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3000/users', {
+    axios.post('https://stepsify.herokuapp.com/users', {
       username: name,
       sex: sex,
       password: password

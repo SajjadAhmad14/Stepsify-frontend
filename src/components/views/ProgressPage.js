@@ -7,7 +7,7 @@ const ProgressPage = () => {
   const user = sessionStorage.getItem("user")
   const userInfo = JSON.parse(user)
   const id = parseInt(userInfo.id)
-    axios.get('http://localhost:3000/api/v1/targets', {
+    axios.get(`https://stepsify.herokuapp.com/${id}/targets`, {
       user_id: id
     })
     .then(data => {
