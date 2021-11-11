@@ -28,7 +28,7 @@ const StepsifyPage = () => {
     e.preventDefault();
     axios
       .post(
-        `https://stepsify.herokuapp.com/${id}/activity_stats`,
+        `http://localhost:3000/activity_stats`,
         {
           steps: steps,
           user_id: id,

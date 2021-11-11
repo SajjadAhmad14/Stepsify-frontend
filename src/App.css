@@ -7,14 +7,14 @@
 
 @font-face {
   font-family: "HalveticaNueLight";
-  src: local("HalveticaNueLight"), url("./font/HelveticaNeue-Light.otf")
-  format("truetype");
+  src: local("HalveticaNueLight"),
+    url("./font/HelveticaNeue-Light.otf") format("truetype");
 }
 
 @font-face {
   font-family: "HalveticaNueBold";
-  src: local("HalveticaNueBold"), url("./font/Helvetica-Neue-Bold_22498.ttf")
-  format("truetype");
+  src: local("HalveticaNueBold"),
+    url("./font/Helvetica-Neue-Bold_22498.ttf") format("truetype");
   font-weight: bold;
 }
 
@@ -50,12 +50,18 @@
   padding: 10px;
 }
 
-.more-icon, .trend-icon, .progress-icon, .add-icon, .user-icon, .left-arrow {
+.more-icon,
+.trend-icon,
+.progress-icon,
+.add-icon,
+.user-icon,
+.left-arrow {
   font-size: 30px;
   color: var(--white);
 }
 
-.add-steps-heading, .progress-heading {
+.add-steps-heading,
+.progress-heading {
   background-color: var(--phanton-blue);
   padding: 5px 0 5px 0;
   width: 100%;
@@ -65,12 +71,30 @@
   color: var(--white);
 }
 
-.stepsify-nav, .more-nav, .progress-nav {
+.stepsify-nav,
+.more-nav,
+.progress-nav {
   background-color: var(--phanton-blue);
   color: var(--white);
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.steps-progress {
+  height: 150px;
+  margin-top: 20px;
+}
+
+.target-progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.target-progress {
+  height: 100px;
+  margin-left: -120px;
 }
 
 .user-info {
@@ -93,7 +117,7 @@
 .user-name div {
   color: var(--phanton-blue);
   font-size: 10px;
-} 
+}
 
 .flex {
   display: flex;
@@ -105,7 +129,8 @@
   background-color: lightgray;
 }
 
-.icon, .icon-text {
+.icon,
+.icon-text {
   color: var(--phanton-grey);
 }
 
@@ -141,7 +166,7 @@
   height: 320px;
   border-radius: 50%;
   margin-top: -130px;
-  border: 5px solid var(--phanton-blue)
+  border: 5px solid var(--phanton-blue);
 }
 
 .steps-input form input {
@@ -177,7 +202,8 @@
   margin-right: 5px;
 }
 
-.cancel-step, .submit-step {
+.cancel-step,
+.submit-step {
   padding: 8px;
   margin-top: 5px;
   background-color: var(--phanton-green);
@@ -187,12 +213,14 @@
   font-size: 20px;
 }
 
-.cancel-step:hover, .submit-step:hover {
+.cancel-step:hover,
+.submit-step:hover {
   background-color: transparent;
   color: var(--phanton-grey);
 }
 
-.submit-btn, .reset-btn {
+.submit-btn,
+.reset-btn {
   position: absolute;
   bottom: -70px;
 }
@@ -229,12 +257,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-} 
+}
 
 .date {
   color: var(--phanton-grey);
   font-size: 20px;
-  font-weight: bolder
+  font-weight: bolder;
 }
 
 .calories {
@@ -244,7 +272,7 @@
 }
 
 .steps {
-  display:flex;
+  display: flex;
   align-items: center;
   color: var(--phanton-grey);
   font-size: 20px;
@@ -263,10 +291,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--phanton-grey)
+  background-color: var(--phanton-grey);
 }
 
-#name, #password, #sex {
+#name,
+#password,
+#sex {
   padding: 10px;
   width: 250px;
   background-color: transparent;
@@ -301,9 +331,10 @@
   border-radius: 10px;
 }
 
-#submit-btn:hover, .signup-btn a:hover {
+#submit-btn:hover,
+.signup-btn a:hover {
   background-color: transparent;
-  color: var(--white)
+  color: var(--white);
 }
 
 .btn-wrapper {
@@ -315,14 +346,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-} 
+}
 
 .signup-route div {
   margin: 10px 0 10px 0;
   font-size: 30px;
 }
 
-.signup-btn a{
+.signup-btn a {
   text-decoration: none;
   color: var(--phanton-green);
 }

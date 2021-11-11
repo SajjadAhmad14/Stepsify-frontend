@@ -15,7 +15,7 @@ const StepsPage = () => {
   const user = sessionStorage.getItem("user")
   const userInfo = JSON.parse(user)
   const id = parseInt(userInfo.id)
-  axios.get(`https://stepsify.herokuapp.com/${id}/targets`, {
+  axios.get(`http://localhost:3000/${id}/targets`, {
     user_id: id
   })
     .then(data => {
@@ -35,7 +35,7 @@ const StepsPage = () => {
     e.preventDefault()
     axios
       .post(
-        `https://stepsify.herokuapp.com/activities`,
+        `http://localhost:3000/activities`,
         {
           target: target,
           user_id: id,
