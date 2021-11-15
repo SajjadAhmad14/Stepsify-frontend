@@ -81,20 +81,129 @@
   width: 100%;
 }
 
-.steps-progress {
-  height: 150px;
-  margin-top: 20px;
+.progress-page {
+  font-family: "HalveticaNueBold";
+  background-color: hsl(0, 0%, 95%);
+  height: 100vh;
 }
 
 .target-progress-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  margin-top: 2px;
+  padding: 5px 5px;
+}
+
+.target-progress-container div {
+  padding-left: 0px;
+  color: var(--phanton-grey);
 }
 
 .target-progress {
+  height: 150px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.steps-text,
+.steps-text-2 {
+  color: var(--phanton-grey);
+}
+
+.steps-text {
+  margin-bottom: 10px;
+}
+
+.steps-text-2 {
+  margin-top: 10px;
+}
+
+strong {
+  color: var(--phanton-green);
+}
+
+.steps-progress {
   height: 100px;
-  margin-left: -120px;
+  margin-left: -100px;
+  padding-right: 0px;
+}
+
+.progress-text {
+  color: red;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  height: 70vh;
+  margin-top: 50px;
+  background-color: hsl(0, 0%, 95%);
+  margin-top: 10px;
+}
+
+.item {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-head {
+  color: var(--phanton-grey);
+}
+
+.stats-value {
+  color: var(--phanton-green);
+  margin: 10px 5px;
+}
+
+.btns {
+  height: 23vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+  margin-top: 10px;
+}
+
+.btn-1, .btn-2 {
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.btn-1 {
+  background-color: transparent;
+  border: none;
+  margin-right: 5px;
+  color: var(--phanton-grey);
+}
+
+.btn-1:hover {
+  background-color: var(--phanton-green);
+  color: var(--white);
+}
+
+.btn-2 {
+  background-color: var(--phanton-green);
+  border: none;
+  color: var(--white);
+}
+
+.btn-2:hover {
+  background-color: var(--white);
+  color: var(--phanton-grey);
 }
 
 .user-info {
@@ -296,14 +405,16 @@
 
 #name,
 #password,
-#sex {
+#sex,
+#height,
+#weight {
   padding: 10px;
   width: 250px;
   background-color: transparent;
   border: 2px solid var(--phanton-green);
   outline: none;
-  border-radius: 15px;
-  margin-bottom: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
   color: var(--white);
   font-size: 20px;
 }
@@ -316,8 +427,12 @@
   color: var(--phanton-grey);
 }
 
-::placeholder {
-  color: var(--phanton-grey);
+#name::placeholder,
+#password::placeholder,
+#sex::placeholder,
+#height::placeholder,
+#weight::placeholder {
+  color: var(--white);
 }
 
 #submit-btn {

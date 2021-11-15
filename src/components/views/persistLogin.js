@@ -3,7 +3,6 @@ import allActions from '../store/actions/index'
 const axios = require("axios");
 
 const CheckLogin = () => {
-  // const dispatch = useDispatch()
   const token = JSON.parse(localStorage.getItem("token"));
   axios
     .get("http://localhost:3000/auto_login", {
@@ -14,7 +13,6 @@ const CheckLogin = () => {
     })
     .then((data) => {
       console.log(data)
-      // dispatch(allActions.login(data))
     })
     .catch((error) => {
       if (error.response) {

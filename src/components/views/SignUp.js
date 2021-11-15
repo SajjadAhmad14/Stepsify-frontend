@@ -14,12 +14,25 @@ const SignUp = () => {
     });
   };
   const [name, setName] = useState('')
+  const [height, setHeight] = useState(0.0)
+  const [weight, setWeight] = useState(0.0)
   const [password, setPassword] = useState('')
   const [sex, setSex] = useState('Male')
   const history = useHistory()
   const handleName = (e) => {
     setName(e.target.value)
   }
+
+  const handleHeight = (e) => {
+    const height = parseFloat(e.target.value)
+    setHeight(height)
+  }
+
+  const handleWeight = (e) => {
+    const weight = parseFloat(e.target.value)
+    setWeight(weight)
+  }
+
   const handlePassword = (e) => {
     setPassword(e.target.value)
   }
@@ -32,6 +45,8 @@ const SignUp = () => {
     e.preventDefault()
     axios.post('http://localhost:3000/users', {
       username: name,
+      height: height,
+      weight: weight,
       sex: sex,
       password: password,
       headers: {"Access-Control-Allow-Origin": "*"}
@@ -66,7 +81,9 @@ const SignUp = () => {
       />
       <div className='login-form'>
         <form onSubmit={handleSubmit}>
-          <input type='text' name='name' id='name' placeholder='Username here' required onChange={handleName} /><br />
+          <input type='text' name='name' id='name' placeholder='Your name here' required onChange={handleName} /><br />
+          <input type='text' name='height' id='height' placeholder='Your height here in feet here' required onChange={handleHeight} /><br />
+          <input type='text' name='weight' id='weight' placeholder='Your weight in kg here' required onChange={handleWeight} /><br />
           <input type='password' name='password' id='password' placeholder='Password here' required onChange={handlePassword} /><br />
           <select name="sex" id="sex" onClick={handleSex}>
             <option value="Male">Male</option>

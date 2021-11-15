@@ -15,13 +15,6 @@ const StepsPage = () => {
   const user = sessionStorage.getItem("user")
   const userInfo = JSON.parse(user)
   const id = parseInt(userInfo.id)
-  axios.get(`http://localhost:3000/${id}/targets`, {
-    user_id: id
-  })
-    .then(data => {
-      console.log(data)
-    })
-
   const handleChange = (e) => {
     const target = parseFloat(e.target.value).toFixed(1)
     setTarget(target)

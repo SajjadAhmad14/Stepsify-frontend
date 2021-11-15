@@ -14,12 +14,6 @@ const StepsifyPage = () => {
   const user = sessionStorage.getItem("user")
   const userInfo = JSON.parse(user)
   const id = userInfo.id
-  axios.get(`http://localhost:3000/${id}/user_stats`, {
-    user_id: id
-  })
-  .then(data=> {
-    console.log(data)
-  })
   const handleChange = (e) => {
     e.preventDefault();
     setSteps(e.target.value);
