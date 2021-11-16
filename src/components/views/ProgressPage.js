@@ -31,16 +31,15 @@ const ProgressPage = () => {
       user_id: id,
     })
     .then((data) => {
-      setSteps(data.data.sum);
+      setSteps(data.data.today_stats);
       setHeight(data.data.height);
       setWeight(data.data.weight);
-      setCalories(data.data.calories);
+      setCalories(data.data.today_calories);
       SetBmi(data.data.bmi);
     });
   if (!isLoggedIn()) {
     return <Redirect to="/login" />;
   }
-
   return (
     <>
       <div className="progress-page">
@@ -134,13 +133,17 @@ const ProgressPage = () => {
             <div className="stats-head">Feet</div>
           </div>
           <div className="item">
-            <div className="stats-head">Calories Burnt</div>
+            <div className="stats-head">Calories Burnt Today</div>
             <div className="stats-value">{calories}</div>
           </div>
         </div>
         <div className="btns">
-          <button type="submit" className="btn-1">Manage</button>
-          <button type="submit" className="btn-2">Share</button>
+          <button type="submit" className="btn-1">
+            Manage
+          </button>
+          <button type="submit" className="btn-2">
+            Share
+          </button>
         </div>
       </div>
     </>
