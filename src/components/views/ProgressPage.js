@@ -16,6 +16,9 @@ const ProgressPage = () => {
   const stepsPercent = (steps / target) * 100;
   const targetPercent = 100 - stepsPercent;
   const targetLeft = (target - steps).toFixed(1);
+  if (!isLoggedIn()) {
+    return <Redirect to="/login" />;
+  }
   const user = sessionStorage.getItem("user");
   const userInfo = JSON.parse(user);
   const id = parseInt(userInfo.id);
@@ -24,7 +27,7 @@ const ProgressPage = () => {
       user_id: id,
     })
     .then((data) => {
-      setTarget(data.data.sum);
+      setTarget(data.data.today_target);
     });
   axios
     .get(`http://localhost:3000/${id}/user_stats`, {
@@ -37,9 +40,6 @@ const ProgressPage = () => {
       setCalories(data.data.today_calories);
       SetBmi(data.data.bmi);
     });
-  if (!isLoggedIn()) {
-    return <Redirect to="/login" />;
-  }
   return (
     <>
       <div className="progress-page">

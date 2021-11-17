@@ -83,7 +83,7 @@
 
 .progress-page {
   font-family: "HalveticaNueBold";
-  background-color: hsl(0, 0%, 95%);
+  background-color: hsl(0, 0%, 97%);
   height: 100vh;
 }
 
@@ -132,9 +132,8 @@ strong {
 }
 
 .steps-progress {
-  height: 100px;
-  margin-left: -100px;
-  padding-right: 0px;
+  height: 80px;
+  margin-left: -40px;
 }
 
 .progress-text {
@@ -288,7 +287,6 @@ strong {
 }
 
 .stepsify-page {
-  background-color: var(--phanton-grey);
   height: 100vh;
 }
 
@@ -360,18 +358,24 @@ strong {
 
 .calories-card {
   font-family: "HalveticaNueBold";
-  background-color: var(--white);
-  margin-bottom: 1px;
+  background-color: hsl(0, 0%, 97%);
+  margin-bottom: 20px;
+}
+
+.card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  background-color: var(--white);
+}
+
+h3 {
+  margin: 0px 0px;
+  color: #808080;
 }
 
 .date {
   color: var(--phanton-grey);
-  font-size: 20px;
-  font-weight: bolder;
 }
 
 .calories {
@@ -392,7 +396,8 @@ strong {
   font-family: "HalveticaNueLight";
   color: #808080;
   font-size: 15px;
-  margin-right: 5px;
+  margin: 0 5px 0 5px;
+  vertical-align: middle;
 }
 
 .login-form {

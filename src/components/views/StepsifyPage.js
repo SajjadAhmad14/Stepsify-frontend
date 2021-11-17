@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Redirect, useHistory } from "react-router";
 import { AiOutlinePlus } from "react-icons/ai";
 import isLoggedIn from "./isLoggedIn";
+import CaloriesCard from "./CaloriesCard";
 import axios from "axios";
 
 const StepsifyPage = () => {
@@ -37,16 +38,6 @@ const StepsifyPage = () => {
   const stepsForm = () => {
     setIsOpen(true);
   };
-
-  // const handleClick = () => {
-  //   axios.get(`http://localhost:3000/api/v1/user_stats`, {
-  //     user_id: userInfo.id
-  //   })
-  //     .then(data => {
-  //       console.log(data)
-  //     })
-  // }
-  
   return (
     <div className="stepsify-page">
       <div className="stepsify-nav text-center">
@@ -78,7 +69,7 @@ const StepsifyPage = () => {
           </div>
         </form>
       )}
-      {/* <CaloriesCard /> */}
+      <CaloriesCard />
     </div>
   );
 };
