@@ -23,14 +23,14 @@ const ProgressPage = () => {
   const userInfo = JSON.parse(user);
   const id = parseInt(userInfo.id);
   axios
-    .get(`http://localhost:3000/${id}/targets`, {
+    .get(`https://stark-garden-93825.herokuapp.com/${id}/targets`, {
       user_id: id,
     })
     .then((data) => {
       setTarget(data.data.today_target);
     });
   axios
-    .get(`http://localhost:3000/${id}/user_stats`, {
+    .get(`https://stark-garden-93825.herokuapp.com/${id}/user_stats`, {
       user_id: id,
     })
     .then((data) => {

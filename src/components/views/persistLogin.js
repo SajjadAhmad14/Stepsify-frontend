@@ -5,7 +5,7 @@ const axios = require("axios");
 const CheckLogin = () => {
   const token = JSON.parse(localStorage.getItem("token"));
   axios
-    .get("http://localhost:3000/auto_login", {
+    .get("https://stepsify.herokuapp.com/auto_login", {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",

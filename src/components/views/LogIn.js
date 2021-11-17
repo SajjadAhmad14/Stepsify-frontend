@@ -27,7 +27,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3000/login', {
+    axios.post('https://stark-garden-93825.herokuapp.com/login', {
       username: name,
       password: password
     })
