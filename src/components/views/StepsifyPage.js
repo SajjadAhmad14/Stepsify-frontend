@@ -23,7 +23,7 @@ const StepsifyPage = () => {
     e.preventDefault();
     axios
       .post(
-        `http://localhost:3000/activity_stats`,
+        `https://stark-garden-93825.herokuapp.com/activity_stats`,
         {
           steps: steps,
           user_id: id,
