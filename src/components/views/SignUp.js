@@ -43,7 +43,7 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3000/users', {
+    axios.post('https://stark-garden-93825.herokuapp.com/users', {
       username: name,
       height: height,
       weight: weight,
