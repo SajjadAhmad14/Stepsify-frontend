@@ -28,7 +28,7 @@ const CaloriesCard = () => {
   const lastWeek1StepsPercent = (lastweek1Steps / lastWeek1Target) * 100;
   const lastWeek2StepsPercent = (lastweek2Steps / lastWeek2Target) * 100;
   axios
-    .get(`http://localhost:3000/${id}/targets`, {
+    .get(`https://stark-garden-93825.herokuapp.com/${id}/targets`, {
       user_id: id,
     })
     .then((data) => {
@@ -38,7 +38,7 @@ const CaloriesCard = () => {
       setLastWeek2Target(data.data.last_week_2_target);
     });
   axios
-    .get(`http://localhost:3000/${id}/user_stats`, {
+    .get(`https://stark-garden-93825.herokuapp.com/${id}/user_stats`, {
       user_id: id,
     })
     .then((data) => {
