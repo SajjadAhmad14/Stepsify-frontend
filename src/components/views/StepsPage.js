@@ -28,7 +28,7 @@ const StepsPage = () => {
     e.preventDefault()
     axios
       .post(
-        `http://localhost:3000/activities`,
+        `https://stark-garden-93825.herokuapp.com/activities`,
         {
           target: target,
           user_id: id,
