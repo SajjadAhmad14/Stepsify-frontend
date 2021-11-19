@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { Redirect } from "react-router";
-import isLoggedIn from "./isLoggedIn";
-import { CircularProgressbar } from "react-circular-progressbar";
-import { CircularProgressbarWithChildren } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-const axios = require("axios");
+/* eslint-disable */
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { CircularProgressbar, CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import isLoggedIn from './isLoggedIn';
+import 'react-circular-progressbar/dist/styles.css';
+
+const axios = require('axios');
 
 const ProgressPage = () => {
   const [steps, setSteps] = useState(0.0);
@@ -19,7 +20,7 @@ const ProgressPage = () => {
   if (!isLoggedIn()) {
     return <Redirect to="/login" />;
   }
-  const user = sessionStorage.getItem("user");
+  const user = sessionStorage.getItem('user');
   const userInfo = JSON.parse(user);
   const id = parseInt(userInfo.id);
   axios
@@ -56,21 +57,21 @@ const ProgressPage = () => {
               root: {},
               path: {
                 stroke: `#addc91`,
-                strokeLinecap: "butt",
-                transition: "stroke-dashoffset 0.5s ease 0s",
-                transformOrigin: "center center",
+                strokeLinecap: 'butt',
+                transition: 'stroke-dashoffset 0.5s ease 0s',
+                transformOrigin: 'center center',
               },
               trail: {
-                stroke: "#d6d6d6",
-                strokeLinecap: "butt",
-                transform: "rotate(0.25turn)",
-                transformOrigin: "center center",
+                stroke: '#d6d6d6',
+                strokeLinecap: 'butt',
+                transform: 'rotate(0.25turn)',
+                transformOrigin: 'center center',
               },
               text: {
-                fontSize: "16px",
+                fontSize: '16px',
               },
               background: {
-                fill: "#3e98c7",
+                fill: '#3e98c7',
               },
             }}
           >
@@ -96,22 +97,22 @@ const ProgressPage = () => {
               root: {},
               path: {
                 stroke: `red`,
-                strokeLinecap: "butt",
-                transition: "stroke-dashoffset 0.5s ease 0s",
-                transformOrigin: "center center",
+                strokeLinecap: 'butt',
+                transition: 'stroke-dashoffset 0.5s ease 0s',
+                transformOrigin: 'center center',
               },
               trail: {
-                stroke: "#d6d6d6",
-                strokeLinecap: "butt",
-                transform: "rotate(0.1turn)",
-                transformOrigin: "center center",
+                stroke: '#d6d6d6',
+                strokeLinecap: 'butt',
+                transform: 'rotate(0.1turn)',
+                transformOrigin: 'center center',
               },
               text: {
-                fill: "#67899c",
-                fontSize: "16px",
+                fill: '#67899c',
+                fontSize: '16px',
               },
               background: {
-                fill: "#3e98c7",
+                fill: '#3e98c7',
               },
             }}
           />

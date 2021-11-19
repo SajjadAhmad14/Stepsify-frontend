@@ -1,20 +1,21 @@
-import React, { useState } from "react";
-import { Redirect, useHistory } from "react-router";
-import { AiOutlinePlus } from "react-icons/ai";
-import isLoggedIn from "./isLoggedIn";
-import CaloriesCard from "./CaloriesCard";
-import axios from "axios";
+/* eslint-disable */
+import React, { useState } from 'react';
+import { Redirect, useHistory } from 'react-router-dom';
+import { AiOutlinePlus } from 'react-icons/ai';
+import axios from 'axios';
+import isLoggedIn from './isLoggedIn';
+import CaloriesCard from './CaloriesCard';
 
 const StepsifyPage = () => {
-  const history = useHistory()
+  const history = useHistory();
   const [open, setIsOpen] = useState(false);
-  const [steps, setSteps] = useState("");
+  const [steps, setSteps] = useState('');
   if (!isLoggedIn()) {
     return <Redirect to="/login" />;
   }
-  const user = sessionStorage.getItem("user")
-  const userInfo = JSON.parse(user)
-  const id = userInfo.id
+  const user = sessionStorage.getItem('user');
+  const userInfo = JSON.parse(user);
+  const id = userInfo.id;
   const handleChange = (e) => {
     e.preventDefault();
     setSteps(e.target.value);
@@ -23,13 +24,13 @@ const StepsifyPage = () => {
     e.preventDefault();
     axios
       .post(
-        `https://stark-garden-93825.herokuapp.com/activity_stats`,
+        'https://stark-garden-93825.herokuapp.com/activity_stats',
         {
           steps: steps,
           user_id: id,
-        }
-      )
-      history.push('/progresspage')
+        },
+      );
+    history.push('/progresspage');
   };
   const handleReset = () => {
     setIsOpen(false);
@@ -60,7 +61,7 @@ const StepsifyPage = () => {
           />
           <br />
           <div className="text-center">
-            <button type="reset" className="cancel-step" onClick={handleReset}>
+            <button type="submit" className="cancel-step" onClick={handleReset}>
               Cancel
             </button>
             <button type="submit" className="submit-step">

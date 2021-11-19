@@ -1,17 +1,17 @@
 const initialState = {
-  user: {}
-}
+  user: {},
+};
 
 const loginReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'LOG_IN':
       return {
         ...state,
-        user: action.user
+        user: action.user,
       };
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default loginReducer;

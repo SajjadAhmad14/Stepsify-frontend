@@ -1,6 +1,6 @@
-import { combineReducers  } from "redux";
-import signUpReducer from "./signUpReducer";
-import loginReducer from "./loginReducer";
+import { combineReducers } from 'redux';
+import signUpReducer from './signUpReducer';
+import loginReducer from './loginReducer';
 import activityReducer from './activityReducer';
 
 const rootReducer = combineReducers({
@@ -9,4 +9,4 @@ const rootReducer = combineReducers({
   activityReducer,
 });
 
-export default rootReducer
+export default rootReducer;

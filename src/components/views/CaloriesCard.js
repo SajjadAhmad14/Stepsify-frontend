@@ -1,13 +1,14 @@
-import { FaAngleRight } from "react-icons/fa";
-import { CircularProgressbar } from "react-circular-progressbar";
-import axios from "axios";
-import { useState } from "react";
+/* eslint-disable */
+import { FaAngleRight } from 'react-icons/fa';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import axios from 'axios';
+import { useState } from 'react';
 
 const CaloriesCard = () => {
-  const [today, setToday] = useState("");
-  const [yesterday, setYesterday] = useState("");
-  const [lastWeek1, setLastWeek1] = useState("");
-  const [lastWeek2, setLastWeek2] = useState("");
+  const [today, setToday] = useState('');
+  const [yesterday, setYesterday] = useState('');
+  const [lastWeek1, setLastWeek1] = useState('');
+  const [lastWeek2, setLastWeek2] = useState('');
   const [todayCalories, setTodayCalories] = useState(0.0);
   const [yesterdayCalories, setYesterdayCalories] = useState(0.0);
   const [lastWeekCalories1, setlastWeekCalories1] = useState(0.0);
@@ -20,7 +21,7 @@ const CaloriesCard = () => {
   const [yesterdaySteps, setYesterdaySteps] = useState(0.0);
   const [lastweek1Steps, setLastweek1Steps] = useState(0.0);
   const [lastweek2Steps, setLastweek2Steps] = useState(0.0);
-  const user = sessionStorage.getItem("user");
+  const user = sessionStorage.getItem('user');
   const userInfo = JSON.parse(user);
   const id = parseInt(userInfo.id);
   const todayStepsPercent = (todaySteps / todayTarget) * 100;
@@ -57,24 +58,24 @@ const CaloriesCard = () => {
     });
   const changeDateFormat = (date) => {
     const months = [
-      "Jan",
-      "Feb",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "Sep",
-      "October",
-      "November",
-      "Dec",
+      'Jan',
+      'Feb',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'Sep',
+      'October',
+      'November',
+      'Dec',
     ];
     const month = parseInt(date.slice(5, 7));
     const year = date.slice(0, 4);
-    const date_in_number = date.slice(8, 10);
-    const month_name = months[month - 1];
-    return month_name + " " + date_in_number + " " + year;
+    const dateInNumber = date.slice(8, 10);
+    const monthName = months[month - 1];
+    return monthName + ' ' + dateInNumber + ' ' + year;
   };
   return (
     <>
@@ -89,33 +90,37 @@ const CaloriesCard = () => {
                 root: {},
                 path: {
                   stroke: `#addc91`,
-                  strokeLinecap: "butt",
-                  transition: "stroke-dashoffset 0.5s ease 0s",
-                  transformOrigin: "center center",
+                  strokeLinecap: 'butt',
+                  transition: 'stroke-dashoffset 0.5s ease 0s',
+                  transformOrigin: 'center center',
                 },
                 trail: {
-                  stroke: "#d6d6d6",
-                  strokeLinecap: "butt",
-                  transform: "rotate(0.1turn)",
-                  transformOrigin: "center center",
+                  stroke: '#d6d6d6',
+                  strokeLinecap: 'butt',
+                  transform: 'rotate(0.1turn)',
+                  transformOrigin: 'center center',
                 },
                 text: {
-                  fill: "#67899c",
-                  fontSize: "16px",
+                  fill: '#67899c',
+                  fontSize: '16px',
                 },
                 background: {
-                  fill: "#3e98c7",
+                  fill: '#3e98c7',
                 },
               }}
             />
           </div>
           <div className="date">
             {changeDateFormat(today)}
-            <div className="calories">{todayCalories} calories</div>
+            <div className="calories">
+              {todayCalories}
+              calories
+            </div>
           </div>
           <div className="steps">
             {todaySteps}
-            <span>km</span>steps
+            <span>km</span>
+            steps
             <FaAngleRight />
           </div>
         </div>
@@ -129,33 +134,37 @@ const CaloriesCard = () => {
                 root: {},
                 path: {
                   stroke: `red`,
-                  strokeLinecap: "butt",
-                  transition: "stroke-dashoffset 0.5s ease 0s",
-                  transformOrigin: "center center",
+                  strokeLinecap: 'butt',
+                  transition: 'stroke-dashoffset 0.5s ease 0s',
+                  transformOrigin: 'center center',
                 },
                 trail: {
-                  stroke: "#d6d6d6",
-                  strokeLinecap: "butt",
-                  transform: "rotate(0.1turn)",
-                  transformOrigin: "center center",
+                  stroke: '#d6d6d6',
+                  strokeLinecap: 'butt',
+                  transform: 'rotate(0.1turn)',
+                  transformOrigin: 'center center',
                 },
                 text: {
-                  fill: "#67899c",
-                  fontSize: "16px",
+                  fill: '#67899c',
+                  fontSize: '16px',
                 },
                 background: {
-                  fill: "#3e98c7",
+                  fill: '#3e98c7',
                 },
               }}
             />
           </div>
           <div className="date">
             {changeDateFormat(yesterday)}
-            <div className="calories">{yesterdayCalories} calories</div>
+            <div className="calories">
+              {yesterdayCalories}
+              calories
+            </div>
           </div>
           <div className="steps">
             {yesterdaySteps}
-            <span>km</span>steps
+            <span>km</span>
+            steps
             <FaAngleRight />
           </div>
         </div>
@@ -169,33 +178,37 @@ const CaloriesCard = () => {
                 root: {},
                 path: {
                   stroke: `#addc91`,
-                  strokeLinecap: "butt",
-                  transition: "stroke-dashoffset 0.5s ease 0s",
-                  transformOrigin: "center center",
+                  strokeLinecap: 'butt',
+                  transition: 'stroke-dashoffset 0.5s ease 0s',
+                  transformOrigin: 'center center',
                 },
                 trail: {
-                  stroke: "#d6d6d6",
-                  strokeLinecap: "butt",
-                  transform: "rotate(0.25turn)",
-                  transformOrigin: "center center",
+                  stroke: '#d6d6d6',
+                  strokeLinecap: 'butt',
+                  transform: 'rotate(0.25turn)',
+                  transformOrigin: 'center center',
                 },
                 text: {
-                  fill: "#67899c",
-                  fontSize: "16px",
+                  fill: '#67899c',
+                  fontSize: '16px',
                 },
                 background: {
-                  fill: "#3e98c7",
+                  fill: '#3e98c7',
                 },
               }}
             />
           </div>
           <div className="date">
             {changeDateFormat(lastWeek2)}
-            <div className="calories">{lastWeekCalories2} calories</div>
+            <div className="calories">
+              {lastWeekCalories2}
+              calories
+            </div>
           </div>
           <div className="steps">
             {lastweek2Steps}
-            <span>km</span>steps
+            <span>km</span>
+            steps
             <FaAngleRight />
           </div>
         </div>
@@ -208,33 +221,37 @@ const CaloriesCard = () => {
                 root: {},
                 path: {
                   stroke: `#addc91`,
-                  strokeLinecap: "butt",
-                  transition: "stroke-dashoffset 0.5s ease 0s",
-                  transformOrigin: "center center",
+                  strokeLinecap: 'butt',
+                  transition: 'stroke-dashoffset 0.5s ease 0s',
+                  transformOrigin: 'center center',
                 },
                 trail: {
-                  stroke: "#d6d6d6",
-                  strokeLinecap: "butt",
-                  transform: "rotate(0.1turn)",
-                  transformOrigin: "center center",
+                  stroke: '#d6d6d6',
+                  strokeLinecap: 'butt',
+                  transform: 'rotate(0.1turn)',
+                  transformOrigin: 'center center',
                 },
                 text: {
-                  fill: "#67899c",
-                  fontSize: "16px",
+                  fill: '#67899c',
+                  fontSize: '16px',
                 },
                 background: {
-                  fill: "#3e98c7",
+                  fill: '#3e98c7',
                 },
               }}
             />
           </div>
           <div className="date">
             {changeDateFormat(lastWeek1)}
-            <div className="calories">{lastWeekCalories1} calories</div>
+            <div className="calories">
+              {lastWeekCalories1}
+              calories
+            </div>
           </div>
           <div className="steps">
             {lastweek1Steps}
-            <span>km</span>steps
+            <span>km</span>
+            steps
             <FaAngleRight />
           </div>
         </div>

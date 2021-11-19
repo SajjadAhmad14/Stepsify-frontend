@@ -1,6 +1,6 @@
 const addActivity = (activity) => ({
   type: 'ADD_ACTIVITY',
-  activity
+  activity,
 });
 
 export default addActivity;

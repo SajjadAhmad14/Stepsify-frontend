@@ -1,20 +1,17 @@
 const initialState = {
-  user: {}
-}
+  user: {},
+};
 
 const signUpReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SIGN_UP':
       return {
         ...state,
-        user: action.user
+        user: action.user,
       };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default signUpReducer
-
-
-
+export default signUpReducer;

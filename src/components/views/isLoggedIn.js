@@ -1,5 +1,7 @@
+/* eslint-disable */
+
 const isLoggedIn = () => {
-  return !!sessionStorage.getItem("token");
+  return !!sessionStorage.getItem('token');
 };
 
-export default isLoggedIn
+export default isLoggedIn;
