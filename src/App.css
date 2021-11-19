@@ -6,20 +6,22 @@
 }
 
 @font-face {
-  font-family: "HalveticaNueLight";
-  src: local("HalveticaNueLight"),
+  font-family: "HalveticaNueLight", sans-serif;
+  src:
+    local("HalveticaNueLight"),
     url("./font/HelveticaNeue-Light.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "HalveticaNueBold";
-  src: local("HalveticaNueBold"),
+  font-family: "HalveticaNueBold", sans-serif;
+  src:
+    local("HalveticaNueBold"),
     url("./font/Helvetica-Neue-Bold_22498.ttf") format("truetype");
   font-weight: bold;
 }
 
 .nav-bar {
-  font-family: "HalveticaNueBold";
+  font-family: "HalveticaNueBold", sans-serif;
   background-color: var(--phanton-grey);
   color: var(--white);
   display: flex;
@@ -35,6 +37,11 @@
 .nav-bar a {
   text-decoration: none;
   color: var(--white);
+}
+
+.signup-btn a {
+  text-decoration: none;
+  color: var(--phanton-green);
 }
 
 .nav-bar a:hover {
@@ -82,7 +89,7 @@
 }
 
 .progress-page {
-  font-family: "HalveticaNueBold";
+  font-family: "HalveticaNueBold", sans-serif;
   background-color: hsl(0, 0%, 97%);
   height: 100vh;
 }
@@ -97,7 +104,7 @@
 }
 
 .target-progress-container div {
-  padding-left: 0px;
+  padding-left: 0;
   color: var(--phanton-grey);
 }
 
@@ -146,7 +153,6 @@ strong {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   height: 70vh;
-  margin-top: 50px;
   background-color: hsl(0, 0%, 95%);
   margin-top: 10px;
 }
@@ -176,7 +182,8 @@ strong {
   margin-top: 10px;
 }
 
-.btn-1, .btn-2 {
+.btn-1,
+.btn-2 {
   height: 50px;
   width: 200px;
   font-size: 20px;
@@ -246,21 +253,22 @@ strong {
   margin-right: 10px;
 }
 
-.steps-page h3 {
-  font-family: "HalveticaNueBold";
-  color: var(--phanton-grey);
+h3 {
+  margin: 0 0;
+  color: #808080;
 }
 
-.steps-input {
-  background-color: var(--phanton-grey);
+.steps-page h3 {
+  font-family: "HalveticaNueBold", sans-serif;
   color: var(--phanton-grey);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .steps-input {
   background-color: #d3d3d3;
+  color: var(--phanton-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
@@ -275,6 +283,15 @@ strong {
   border-radius: 50%;
   margin-top: -130px;
   border: 5px solid var(--phanton-blue);
+}
+
+.steps-form input {
+  padding: 10px;
+  outline: none;
+  border: 2px solid var(--phanton-blue);
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .steps-input form input {
@@ -294,15 +311,6 @@ strong {
   position: absolute;
   top: 200px;
   right: 80px;
-}
-
-.steps-form input {
-  padding: 10px;
-  outline: none;
-  border: 2px solid var(--phanton-blue);
-  border-radius: 10px;
-  font-size: 20px;
-  text-align: center;
 }
 
 .cancel-step {
@@ -339,7 +347,7 @@ strong {
   outline: none;
   border: none;
   color: var(--white);
-  font-family: "HalveticaNueBold";
+  font-family: "HalveticaNueBold", sans-serif;
   font-size: 20px;
   width: 150px;
 }
@@ -351,13 +359,13 @@ strong {
   padding: 20px 30px 20px 30px;
   background-color: var(--white);
   color: var(--phanton-grey);
-  font-family: "HalveticaNueBold";
+  font-family: "HalveticaNueBold", sans-serif;
   font-size: 20px;
   width: 150px;
 }
 
 .calories-card {
-  font-family: "HalveticaNueBold";
+  font-family: "HalveticaNueBold", sans-serif;
   background-color: hsl(0, 0%, 97%);
   margin-bottom: 20px;
 }
@@ -369,17 +377,12 @@ strong {
   background-color: var(--white);
 }
 
-h3 {
-  margin: 0px 0px;
-  color: #808080;
-}
-
 .date {
   color: var(--phanton-grey);
 }
 
 .calories {
-  font-family: "HalveticaNueLight";
+  font-family: "HalveticaNueLight", sans-serif;
   color: #808080;
   font-size: 20px;
 }
@@ -393,7 +396,7 @@ h3 {
 }
 
 .steps span {
-  font-family: "HalveticaNueLight";
+  font-family: "HalveticaNueLight", sans-serif;
   color: #808080;
   font-size: 15px;
   margin: 0 5px 0 5px;
@@ -471,9 +474,4 @@ h3 {
 .signup-route div {
   margin: 10px 0 10px 0;
   font-size: 30px;
-}
-
-.signup-btn a {
-  text-decoration: none;
-  color: var(--phanton-green);
 }
