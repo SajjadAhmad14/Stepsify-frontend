@@ -1,15 +1,15 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import CaloriesCard from "../components/views/CaloriesCard";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import CaloriesCard from '../components/views/CaloriesCard';
 
-it("renders calories card", () => {
+it('renders calories card', () => {
   sessionStorage.setItem(
-    "user",
+    'user',
     JSON.stringify({
       id: 1,
-      name: "test",
-      sex: "Male",
-    })
+      name: 'test',
+      sex: 'Male',
+    }),
   );
   const tree = renderer.create(<CaloriesCard />);
   expect(tree).toMatchSnapshot();

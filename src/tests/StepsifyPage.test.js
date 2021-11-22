@@ -1,21 +1,21 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import { MemoryRouter } from "react-router-dom";
-import StepsifyPage from "../components/views/StepsifyPage";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
+import StepsifyPage from '../components/views/StepsifyPage';
 
-it("render navigation bar", () => {
+it('render navigation bar', () => {
   sessionStorage.setItem(
-    "user",
+    'user',
     JSON.stringify({
       id: 1,
-      name: "test",
-      sex: "Male",
-    })
+      name: 'test',
+      sex: 'Male',
+    }),
   );
   const tree = renderer.create(
     <MemoryRouter>
       <StepsifyPage />
-    </MemoryRouter>
+    </MemoryRouter>,
   );
   expect(tree).toMatchSnapshot();
 });

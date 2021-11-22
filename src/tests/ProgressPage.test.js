@@ -1,21 +1,21 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import { MemoryRouter } from "react-router-dom";
-import ProgressPage from "../components/views/ProgressPage";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
+import ProgressPage from '../components/views/ProgressPage';
 
-it("render navigation bar", () => {
+it('render navigation bar', () => {
   sessionStorage.setItem(
-    "user",
+    'user',
     JSON.stringify({
       id: 1,
-      name: "test",
-      sex: "Male",
-    })
+      name: 'test',
+      sex: 'Male',
+    }),
   );
   const tree = renderer.create(
     <MemoryRouter>
       <ProgressPage />
-    </MemoryRouter>
+    </MemoryRouter>,
   );
   expect(tree).toMatchSnapshot();
 });
