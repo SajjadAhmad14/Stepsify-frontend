@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders calories card 1`] = `
+<div
+  className="calories-card"
+>
+  <h3>
+    Today
+  </h3>
+  <div
+    className="card"
+  >
+    <div
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <svg
+        className="CircularProgressbar steps-progress"
+        data-test-id="CircularProgressbar"
+        style={Object {}}
+        viewBox="0 0 100 100"
+      >
+        <path
+          className="CircularProgressbar-trail"
+          d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+          fillOpacity={0}
+          strokeWidth={8}
+          style={
+            Object {
+              "stroke": "#d6d6d6",
+              "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+              "strokeDashoffset": "0px",
+              "strokeLinecap": "butt",
+              "transform": "rotate(0.1turn)",
+              "transformOrigin": "center center",
+            }
+          }
+        />
+        <path
+          className="CircularProgressbar-path"
+          d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+          fillOpacity={0}
+          strokeWidth={8}
+          style={
+            Object {
+              "stroke": "#addc91",
+              "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+              "strokeDashoffset": "NaNpx",
+              "strokeLinecap": "butt",
+              "transformOrigin": "center center",
+              "transition": "stroke-dashoffset 0.5s ease 0s",
+            }
+          }
+        />
+      </svg>
+    </div>
+    <div
+      className="date"
+    >
+      undefined  
+      <div
+        className="calories"
+      >
+        0
+        calories
+      </div>
+    </div>
+    <div
+      className="steps"
+    >
+      0
+      <span>
+        km
+      </span>
+      steps
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 256 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+        />
+      </svg>
+    </div>
+  </div>
+  <h3>
+    Yesterday
+  </h3>
+  <div
+    className="card"
+  >
+    <div
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <svg
+        className="CircularProgressbar steps-progress"
+        data-test-id="CircularProgressbar"
+        style={Object {}}
+        viewBox="0 0 100 100"
+      >
+        <path
+          className="CircularProgressbar-trail"
+          d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+          fillOpacity={0}
+          strokeWidth={8}
+          style={
+            Object {
+              "stroke": "#d6d6d6",
+              "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+              "strokeDashoffset": "0px",
+              "strokeLinecap": "butt",
+              "transform": "rotate(0.1turn)",
+              "transformOrigin": "center center",
+            }
+          }
+        />
+        <path
+          className="CircularProgressbar-path"
+          d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+          fillOpacity={0}
+          strokeWidth={8}
+          style={
+            Object {
+              "stroke": "red",
+              "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+              "strokeDashoffset": "NaNpx",
+              "strokeLinecap": "butt",
+              "transformOrigin": "center center",
+              "transition": "stroke-dashoffset 0.5s ease 0s",
+            }
+          }
+        />
+      </svg>
+    </div>
+    <div
+      className="date"
+    >
+      undefined  
+      <div
+        className="calories"
+      >
+        0
+        calories
+      </div>
+    </div>
+    <div
+      className="steps"
+    >
+      0
+      <span>
+        km
+      </span>
+      steps
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 256 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+        />
+      </svg>
+    </div>
+  </div>
+  <h3>
+    Last week
+  </h3>
+  <div
+    className="card"
+  >
+    <div
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <svg
+        className="CircularProgressbar steps-progress"
+        data-test-id="CircularProgressbar"
+        style={Object {}}
+        viewBox="0 0 100 100"
+      >
+        <path
+          className="CircularProgressbar-trail"
+          d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+          fillOpacity={0}
+          strokeWidth={8}
+          style={
+            Object {
+              "stroke": "#d6d6d6",
+              "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+              "strokeDashoffset": "0px",
+              "strokeLinecap": "butt",
+              "transform": "rotate(0.25turn)",
+              "transformOrigin": "center center",
+            }
+          }
+        />
+        <path
+          className="CircularProgressbar-path"
+          d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+          fillOpacity={0}
+          strokeWidth={8}
+          style={
+            Object {
+              "stroke": "#addc91",
+              "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+              "strokeDashoffset": "NaNpx",
+              "strokeLinecap": "butt",
+              "transformOrigin": "center center",
+              "transition": "stroke-dashoffset 0.5s ease 0s",
+            }
+          }
+        />
+      </svg>
+    </div>
+    <div
+      className="date"
+    >
+      undefined  
+      <div
+        className="calories"
+      >
+        0
+        calories
+      </div>
+    </div>
+    <div
+      className="steps"
+    >
+      0
+      <span>
+        km
+      </span>
+      steps
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 256 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="card"
+  >
+    <div
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <svg
+        className="CircularProgressbar steps-progress"
+        data-test-id="CircularProgressbar"
+        style={Object {}}
+        viewBox="0 0 100 100"
+      >
+        <path
+          className="CircularProgressbar-trail"
+          d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+          fillOpacity={0}
+          strokeWidth={8}
+          style={
+            Object {
+              "stroke": "#d6d6d6",
+              "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+              "strokeDashoffset": "0px",
+              "strokeLinecap": "butt",
+              "transform": "rotate(0.1turn)",
+              "transformOrigin": "center center",
+            }
+          }
+        />
+        <path
+          className="CircularProgressbar-path"
+          d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+          fillOpacity={0}
+          strokeWidth={8}
+          style={
+            Object {
+              "stroke": "#addc91",
+              "strokeDasharray": "289.02652413026095px 289.02652413026095px",
+              "strokeDashoffset": "NaNpx",
+              "strokeLinecap": "butt",
+              "transformOrigin": "center center",
+              "transition": "stroke-dashoffset 0.5s ease 0s",
+            }
+          }
+        />
+      </svg>
+    </div>
+    <div
+      className="date"
+    >
+      undefined  
+      <div
+        className="calories"
+      >
+        0
+        calories
+      </div>
+    </div>
+    <div
+      className="steps"
+    >
+      0
+      <span>
+        km
+      </span>
+      steps
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 256 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
