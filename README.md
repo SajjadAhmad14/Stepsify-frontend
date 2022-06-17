@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Stepsify Front end
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a steps tracker app. User can set a running target and add steps to meet daily target. User can see progess and stats.
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+To build this application I used:
 
-### `yarn start`
+ - Javascript ES6;
+ - Html/CSS;
+ - React.js, React Hooks, React Router;
+ - Redux, Redux-thunk;
+ - Jest;
+ - Linters ( eslint and stylelint)
+ - Netlify
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[The live demo link](https://stepsify.netlify.app/)
 
-### `yarn test`
+## Link for back-end repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Link for back-end repository](https://stark-garden-93825.herokuapp.com)
 
-### `yarn build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - Log in, log out and sign up
+ - Set running target in kilo meters
+ - Add steps to meet daily target
+ - See progress and stats
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to use the application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Application has secure login and signup. A user must provide and password while logging in. On Sign Up User must provide a username, password, sex, height, and weight.
 
-### `yarn eject`
+User will get authenticated and add target of running in kilo meters, then user will add steps in kilo meters he has ran, and he can see his progress and stats.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get a local copy of the repository please run the following commands on your terminal:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - ```git clone git@github.com:SajjadAhmad14/Stepsify-frontend.git```
+  - ```cd Stepsify-frontend```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Launch the application
 
-## Learn More
+After making the local copy of the repository:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ - get inside the repository folder;
+ - setup the dependencies of the project: in the terminal run: ```npm install```
+ - enter the command: ```npm start``` to start the server in localhost.
+ - then you get the application in the localhost in your web browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to reach me out. I'm always happy to connect :slightly_smiling_face:
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 **Sajjad Ahmad**
 
-### Analyzing the Bundle Size
+[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/SajjadAhmad14)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://twitter.com/Sajjad_Ahmad14)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/sajjadahmad14/)
+[<code><img height="26" src="https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/gmail.png"></code>](mailto:jogimar14@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Show your support
 
-### Making a Progressive Web App
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 
-### Advanced Configuration
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
+- <a href="https://www.stackoverflow.com/" target="_blank">Stackoverflow</a>
+- <a href="https://www.microverse.org/" target="_blank">Microverse</a>

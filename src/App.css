@@ -1,3 +1,477 @@
-.App {
+:root {
+  --phanton-grey: #67899c;
+  --phanton-blue: #62b5e5;
+  --phanton-green: #addc91;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: "HalveticaNueLight", sans-serif;
+  src:
+    local("HalveticaNueLight"),
+    url("./font/HelveticaNeue-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "HalveticaNueBold", sans-serif;
+  src:
+    local("HalveticaNueBold"),
+    url("./font/Helvetica-Neue-Bold_22498.ttf") format("truetype");
+  font-weight: bold;
+}
+
+.nav-bar {
+  font-family: "HalveticaNueBold", sans-serif;
+  background-color: var(--phanton-grey);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.signup-btn a {
+  text-decoration: none;
+  color: var(--phanton-green);
+}
+
+.nav-bar a:hover {
+  background-color: var(--phanton-blue);
+}
+
+.nav-bar a:active {
+  background-color: var(--phanton-blue);
+}
+
+.text-center {
   text-align: center;
+  padding: 10px;
+}
+
+.more-icon,
+.trend-icon,
+.progress-icon,
+.add-icon,
+.user-icon,
+.left-arrow {
+  font-size: 30px;
+  color: var(--white);
+}
+
+.add-steps-heading,
+.progress-heading {
+  background-color: var(--phanton-blue);
+  padding: 5px 0 5px 0;
+  width: 100%;
+}
+
+.add-steps-heading h1 {
+  color: var(--white);
+}
+
+.stepsify-nav,
+.more-nav,
+.progress-nav {
+  background-color: var(--phanton-blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.progress-page {
+  font-family: "HalveticaNueBold", sans-serif;
+  background-color: hsl(0, 0%, 97%);
+  height: 100vh;
+}
+
+.target-progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  margin-top: 2px;
+  padding: 5px 5px;
+}
+
+.target-progress-container div {
+  padding-left: 0;
+  color: var(--phanton-grey);
+}
+
+.target-progress {
+  height: 150px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.steps-text,
+.steps-text-2 {
+  color: var(--phanton-grey);
+}
+
+.steps-text {
+  margin-bottom: 10px;
+}
+
+.steps-text-2 {
+  margin-top: 10px;
+}
+
+strong {
+  color: var(--phanton-green);
+}
+
+.steps-progress {
+  height: 80px;
+  margin-left: -40px;
+}
+
+.progress-text {
+  color: red;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  height: 70vh;
+  background-color: hsl(0, 0%, 95%);
+  margin-top: 10px;
+}
+
+.item {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-head {
+  color: var(--phanton-grey);
+}
+
+.stats-value {
+  color: var(--phanton-green);
+  margin: 10px 5px;
+}
+
+.btns {
+  height: 23vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+  margin-top: 10px;
+}
+
+.btn-1,
+.btn-2 {
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.btn-1 {
+  background-color: transparent;
+  border: none;
+  margin-right: 5px;
+  color: var(--phanton-grey);
+}
+
+.btn-1:hover {
+  background-color: var(--phanton-green);
+  color: var(--white);
+}
+
+.btn-2 {
+  background-color: var(--phanton-green);
+  border: none;
+  color: var(--white);
+}
+
+.btn-2:hover {
+  background-color: var(--white);
+  color: var(--phanton-grey);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  padding-left: 10px;
+  color: var(--phanton-grey);
+}
+
+.user-avatar {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 20px;
+}
+
+.user-name div {
+  color: var(--phanton-blue);
+  font-size: 10px;
+}
+
+.flex {
+  display: flex;
+  padding: 10px 0 10px 10px;
+  margin-bottom: 15px;
+}
+
+.user-panel {
+  background-color: lightgray;
+}
+
+.icon,
+.icon-text {
+  color: var(--phanton-grey);
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+h3 {
+  margin: 0 0;
+  color: #808080;
+}
+
+.steps-page h3 {
+  font-family: "HalveticaNueBold", sans-serif;
+  color: var(--phanton-grey);
+}
+
+.steps-input {
+  background-color: #d3d3d3;
+  color: var(--phanton-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.steps-input form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  color: #000;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  margin-top: -130px;
+  border: 5px solid var(--phanton-blue);
+}
+
+.steps-form input {
+  padding: 10px;
+  outline: none;
+  border: 2px solid var(--phanton-blue);
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.steps-input form input {
+  outline: none;
+  border: none;
+  text-align: center;
+  font-size: 80px;
+  width: 50%;
+  padding: 30px;
+}
+
+.stepsify-page {
+  height: 100vh;
+}
+
+.steps-form {
+  position: absolute;
+  top: 200px;
+  right: 80px;
+}
+
+.cancel-step {
+  margin-right: 5px;
+}
+
+.cancel-step,
+.submit-step {
+  padding: 8px;
+  margin-top: 5px;
+  background-color: var(--phanton-green);
+  border: 2px solid var(--phanton-green);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.cancel-step:hover,
+.submit-step:hover {
+  background-color: transparent;
+  color: var(--phanton-grey);
+}
+
+.submit-btn,
+.reset-btn {
+  position: absolute;
+  bottom: -70px;
+}
+
+.submit-btn {
+  padding: 20px 30px 20px 30px;
+  background-color: var(--phanton-green);
+  margin-left: 120px;
+  outline: none;
+  border: none;
+  color: var(--white);
+  font-family: "HalveticaNueBold", sans-serif;
+  font-size: 20px;
+  width: 150px;
+}
+
+.reset-btn {
+  outline: none;
+  border: none;
+  margin-right: 120px;
+  padding: 20px 30px 20px 30px;
+  background-color: var(--white);
+  color: var(--phanton-grey);
+  font-family: "HalveticaNueBold", sans-serif;
+  font-size: 20px;
+  width: 150px;
+}
+
+.calories-card {
+  font-family: "HalveticaNueBold", sans-serif;
+  background-color: hsl(0, 0%, 97%);
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.date {
+  color: var(--phanton-grey);
+}
+
+.calories {
+  font-family: "HalveticaNueLight", sans-serif;
+  color: #808080;
+  font-size: 20px;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  color: var(--phanton-grey);
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.steps span {
+  font-family: "HalveticaNueLight", sans-serif;
+  color: #808080;
+  font-size: 15px;
+  margin: 0 5px 0 5px;
+  vertical-align: middle;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--phanton-grey);
+}
+
+#name,
+#password,
+#sex,
+#height,
+#weight {
+  padding: 10px;
+  width: 250px;
+  background-color: transparent;
+  border: 2px solid var(--phanton-green);
+  outline: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+#sex {
+  width: 270px;
+}
+
+#sex option {
+  color: var(--phanton-grey);
+}
+
+#name::placeholder,
+#password::placeholder,
+#sex::placeholder,
+#height::placeholder,
+#weight::placeholder {
+  color: var(--white);
+}
+
+#submit-btn {
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: var(--phanton-green);
+  padding: 5px;
+  border: 2px solid var(--phanton-green);
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#submit-btn:hover,
+.signup-btn a:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-self: center;
+}
+
+.signup-route {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-route div {
+  margin: 10px 0 10px 0;
+  font-size: 30px;
 }
